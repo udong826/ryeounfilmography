@@ -226,7 +226,7 @@ str += "<table style=\"width:200px; font-size:12px; line-height:120%; margin-lef
 str += "<tr><td style=\"color:#ffffff; background-color:#000; text-align:center;\">순위<\/td><td style=\"color:#ffffff; background-color:#000; text-align:center;\">이름<\/td><\/tr>";
 
 for (i=0; i<namMember.length; i++) {
-str += "<tr><td style=\"border:1px solid #000; text-align:right; padding-right:5px;\">"+ranking+"<\/td><td style=\"border:1px solid #000; padding-left:5px;\">"+namMember[lstMember[0][i]]+"<\/td><\/tr>";
+str += "<tr><td style=\"border:1px solid #000; text-align:right; padding-right:5px;\">"+ranking+"<\/td><td style=\"border:1px solid #000; padding-left:5px;\">"+namMember[lstMember[0][i]].replace(/<[^>]*>/g, "").trim()+"<\/td><\/tr>";
 if (i<namMember.length-1) {
 if (equal[lstMember[0][i]]==lstMember[0][i+1]) {
 sameRank++;
@@ -318,7 +318,7 @@ a:hover{color:#99ccff;}
 <meta name="generator" content="Namo WebEditor(Trial)">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"></head>
 
-<body text="#ffffff" bgcolor="93a9d1" link="#0099ff" vlink="#0099ff" alink="#0099ff">
+<body text="#000000" bgcolor="#93a9d1" link="#0099ff" vlink="#0099ff" alink="#0099ff">
 <table id="mainTable" align="center">
 <tr>
         <td id="battleNumber" colspan="3" style="padding-bottom: 10px;">
